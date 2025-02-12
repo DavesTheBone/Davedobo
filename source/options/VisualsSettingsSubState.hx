@@ -16,57 +16,6 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 		title = Language.getPhrase('visuals_menu', 'Visuals Settings');
 		rpcTitle = 'Visuals Settings Menu'; //for Discord Rich Presence
 
-		// for note skins and splash skins
-		notes = new FlxTypedGroup<StrumNote>();
-		splashes = new FlxTypedGroup<NoteSplash>();
-		for (i in 0...Note.colArray.length)
-		{
-			var note:StrumNote = new StrumNote(370 + (560 / Note.colArray.length) * i, -200, i, 0);
-			changeNoteSkin(note);
-			notes.add(note);
-			
-			var splash:NoteSplash = new NoteSplash(0, 0, NoteSplash.defaultNoteSplash + NoteSplash.getSplashSkinPostfix());
-			splash.inEditor = true;
-			splash.babyArrow = note;
-			splash.ID = i;
-			splash.kill();
-			splashes.add(splash);
-		}
-
-		// options
-		var noteSkins:Array<String> = Mods.mergeAllTextsNamed('images/noteSkins/list.txt');
-		if(noteSkins.length > 0)
-		{
-			if(!noteSkins.contains(ClientPrefs.data.noteSkin))
-				ClientPrefs.data.noteSkin = ClientPrefs.defaultData.noteSkin; //Reset to default if saved noteskin couldnt be found
-
-			noteSkins.insert(0, ClientPrefs.defaultData.noteSkin); //Default skin always comes first
-			var option:Option = new Option('Note Skins:',
-				"Select your prefered Note skin.",
-				'noteSkin',
-				STRING,
-				noteSkins);
-			addOption(option);
-			option.onChange = onChangeNoteSkin;
-			noteOptionID = optionsArray.length - 1;
-		}
-		
-		var noteSplashes:Array<String> = Mods.mergeAllTextsNamed('images/noteSplashes/list.txt');
-		if(noteSplashes.length > 0)
-		{
-			if(!noteSplashes.contains(ClientPrefs.data.splashSkin))
-				ClientPrefs.data.splashSkin = ClientPrefs.defaultData.splashSkin; //Reset to default if saved splashskin couldnt be found
-
-			noteSplashes.insert(0, ClientPrefs.defaultData.splashSkin); //Default skin always comes first
-			var option:Option = new Option('Note Splashes:',
-				"Select your prefered Note Splash variation.",
-				'splashSkin',
-				STRING,
-				noteSplashes);
-			addOption(option);
-			option.onChange = onChangeSplashSkin;
-		}
-
 		var option:Option = new Option('Note Splash Opacity',
 			'How much transparent should the Note Splashes be.',
 			'splashAlpha',
@@ -138,7 +87,6 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 		addOption(option);
 		option.onChange = onChangePauseMusic;
 		
-		#if CHECK_FOR_UPDATES
 		var option:Option = new Option('Check for Updates',
 			'On Release builds, turn this on to check for updates when you start the game.',
 			'checkForUpdates',
