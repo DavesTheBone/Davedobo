@@ -40,9 +40,11 @@ class CreditsState extends MusicBeatState
 		var defaultList:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
 			["mod creater"],
 			["DavesTheBone"],		"daves",		"Charter, coder",					"https://x.com/DavesOurpleGUY",	"ffffff"],
-                        ["song credits"],
+                        [""],
+		        ["Song credits"],
 		        ["Hazetal"],       "Hazetal",                 "crate of Algebra remix",           "none",            "https://twitter.com/HazetalYT", "A1A1A1"],
 			["KayipKux"],              "KayipKux",             "create of Algebraic Equations",            "KayipKux",            "https://twitter.com/kayipkux", "6A695E"],
+			[""],
 			["original mods"],
 			["MoldyGH"],      "creater of dnb and DFAC",                 "MoldyGH",              "https://x.com/moldy_gh?lang=ja", "0000FF"],
 			["Weodobo"],    "creater of DCFM" "Weodobo",              "https://twitter.com/Weodobo_", "FFEE00"],
