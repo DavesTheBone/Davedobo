@@ -42,13 +42,13 @@ class CreditsState extends MusicBeatState
 			["DavesTheBone",		"daves",		"Charter, coder",					"https://x.com/DavesOurpleGUY",	"ffffff"],
                         [""],
 		        ["Song credits"],
-		        ["Hazetal",       "Hazetal",                 "crate of Algebra remix",           "none",            "https://twitter.com/HazetalYT", "A1A1A1"],
+		        ["Hazetal",       "none",                 "crate of Algebra remix",                 "https://twitter.com/HazetalYT",     "A1A1A1"],
 			["KayipKux",              "KayipKux",             "create of Algebraic Equations",            "KayipKux",            "https://twitter.com/kayipkux", "6A695E"],
 			[""],
 			["original mods"],
-			["MoldyGH",      "creater of dnb and DFAC",                 "MoldyGH",              "https://x.com/moldy_gh?lang=ja", "0000FF"],
-			["Weodobo",    "creater of DCFM" "Weodobo",              "https://twitter.com/Weodobo_", "FFEE00"],
-			["Sky!",   "creater of golden apple2",                   "sky!",           "https://x.com/skyfactorial",     "3A00C1"],
+			["MoldyGH",      "MoldyGH",                 "creater of dnb and DFAC",              "https://x.com/moldy_gh?lang=ja", "0000FF"],
+			["Weodobo",    "Weodobo", "creater of DCFM",              "https://twitter.com/Weodobo_", "FFEE00"],
+			["Sky!",   "sky!",                   "creater of golden apple",           "https://x.com/skyfactorial",     "3A00C1"],
 		];
 		
 		for(i in defaultList)
