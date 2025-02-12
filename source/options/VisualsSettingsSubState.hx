@@ -92,7 +92,6 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 			'checkForUpdates',
 			BOOL);
 		addOption(option);
-		#end
 
 		#if DISCORD_ALLOWED
 		var option:Option = new Option('Discord Rich Presence',
