@@ -27,10 +27,10 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'freeplay',
 		'credits'
-		'options'
 	];
 
-
+	var rightOption:String = 'options';
+	
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 
