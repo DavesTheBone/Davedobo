@@ -30,7 +30,7 @@ class MainMenuState extends MusicBeatState
 	];
 
 	var rightOption:String = 'options';
-	
+
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 
@@ -294,6 +294,7 @@ class MainMenuState extends MusicBeatState
 							MusicBeatState.switchState(new StoryMenuState());
 						case 'freeplay':
 							MusicBeatState.switchState(new FreeplayState());
+
 						case 'credits':
 							MusicBeatState.switchState(new CreditsState());
 						case 'options':
