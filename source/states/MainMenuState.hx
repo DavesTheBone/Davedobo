@@ -25,10 +25,12 @@ class MainMenuState extends MusicBeatState
 
 	//Centered/Text options
 	var optionShit:Array<String> = [
+		'story_mode',
 		'freeplay',
 		'credits'
 	];
 
+	var leftOption:String = #if ACHIEVEMENTS_ALLOWED 'achievements' #else null #end;
 	var rightOption:String = 'options';
 
 	var magenta:FlxSprite;
@@ -306,6 +308,7 @@ class MainMenuState extends MusicBeatState
 								PlayState.SONG.splashSkin = null;
 								PlayState.stageUI = 'normal';
 							}
+
 						default:
 							trace('Menu Item ${option} doesn\'t do anything');
 							selectedSomethin = false;
