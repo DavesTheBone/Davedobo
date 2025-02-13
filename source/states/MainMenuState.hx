@@ -27,9 +27,9 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'freeplay',
 		'credits'
+		'story_mode'
 	];
 
-	var leftOption:String = #if ACHIEVEMENTS_ALLOWED 'achievements' #else null #end;
 	var rightOption:String = 'options';
 
 	var magenta:FlxSprite;
