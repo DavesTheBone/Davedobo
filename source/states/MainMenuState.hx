@@ -265,7 +265,6 @@ class MainMenuState extends MusicBeatState
 
 				var item:FlxSprite;
 				var option:String;
-				switch(curColumn)
 				{
 					case CENTER:
 						option = optionShit[curSelected];
